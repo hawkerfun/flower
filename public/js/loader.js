@@ -49,7 +49,7 @@
  * 
  * @author: Jack Doyle, jack@greensock.com
  **/
- setTimeout(function(){ console.log(1);
+
 (function() {
     var e, t, n, r, i, s, o, u, a, f;
     e = window.device, window.device = {}, n = window.document.documentElement, f = window.navigator.userAgent.toLowerCase(), device.ios = function() {
@@ -8433,4 +8433,3 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
         }) : e.start()
     })
 }), define("loader", function() {});
- }, 1000);
