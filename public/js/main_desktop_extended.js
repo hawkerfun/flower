@@ -800,7 +800,7 @@ define("route/router", ["backbone", "underscore"], function(e, t) {
             flowState: null,
             lastFlowState: null,
             modal: null,
-            recipientMode: !1,
+            recipientMode: !0, //hawker_fun changes
             pageOptions: {},
             postLoaderPage: null,
             postLoaderPageOptions: null
@@ -2655,10 +2655,10 @@ define("route/router", ["backbone", "underscore"], function(e, t) {
             this.setByNames(t[0], t[1], n)
         },
         getPrettySenderName: function() {
-            return this.getPrettyName(this.get("sender_name"))
+            return 'Сгущен'//this.getPrettyName(this.get("sender_name"))
         },
         getPrettyRecipientName: function() {
-            return this.getPrettyName(this.get("recipient_name"))
+            return 'Кошечк'//this.getPrettyName(this.get("recipient_name"))
         },
         getPrettyName: function(e) {
             return e === null && (e = ""), e = "" + e, e.length > 1 && (e = e.substr(0, 1).toUpperCase() + e.substr(1)), e
@@ -8777,14 +8777,14 @@ function(e, t) {
             var e = o.getPrettySenderName(),
                 t = o.getPrettyRecipientName(),
                 n = '<h3 class="headerTitle">Your flower for <span class="js-recipient" style="color: #F96943;">' + t + "</span></h3>",
-                r = '<h3 class="headerTitle">To <span class="js-recipient" style="color: #F96943;">' + t + '</span> From <span class="js-recipient" style="color: #F96943;">' + e + "</span></h3>";
+                r = '<h3 class="headerTitle">Нежной <span class="js-recipient" style="color: #F96943;">' + t + 'e</span> ОТ <span class="js-recipient" style="color: #F96943;">' + e + "а</span></h3>";
             this.el.innerHTML = s.attributes.recipientMode === !0 ? r : n
         }
     })
 }), define("view/pages/desktop/footer", ["jquery", "underscore", "view/common/base_flow_view", "config", "route/router", "model/app_model", "console", "view/common/communicator", "events/view", "TweenMax"], function(e, t, n, r, i, s, o, u, a, f) {
     return n.extend({
         initialize: function() {
-            this.share_btn = e(".js-footer-info")[0], this.share_btn.addEventListener("click", t.bind(this.onShareClick, this)), s.on("change:modal", this.onChange_modal, this), e(".js-footer-resn").on("click", t.bind(this.onResnClick, this))
+            //this.share_btn = e(".js-footer-info")[0], this.share_btn.addEventListener("click", t.bind(this.onShareClick, this)), s.on("change:modal", this.onChange_modal, this), e(".js-footer-resn").on("click", t.bind(this.onResnClick, this))
         },
         onShareClick: function() {
             o.log("info_btn click"), u.trigger(a.REQUEST_MODAL, s.MODAL.SHARE_SITE)
@@ -21381,7 +21381,8 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
                 n = f.getPrettyRecipientName(),
                 r = f.getPrettySenderName(),
                 i, o;
-            t ? e ? (i = "a Valentines Flower", o = "Dear " + n + ", " + r + " has created a unique flower especially for you.") : (i = "a Flower for you", o = "Dear " + n + ", " + r + " has created a unique flower especially for you.") : e ? (i = "Create a Valentines Flower", o = 'Enter your names &amp;<br> click <div class="heart-wrapper"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart-solid"></use></svg></div> to create a unique flower<br/> for your Valentine') : (i = "Create a Flower", o = 'Enter your names &amp;<br> click <div class="heart-wrapper"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart-solid"></use></svg></div> to create a unique flower<br/> for someone'), this.titleEl.innerHTML = i, this.bodyEl.innerHTML = o
+            t ? e ? (i = "a Valentines Flower", o = "Dear " + n + ", " + r + " has created a unique flower especially for you.") : (i = "😻😽😽😽", o = "Моя нежная " + n + "а 😽, Эти Цветочки никогда не покинут тебя. С Любовью твой "+ r) : e ? (i = "Create a Valentines Flower", o = 'Enter your names &amp;<br> click <div class="heart-wrapper"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart-solid"></use></svg></div> to create a unique flower<br/> for your Valentine') : (i = "Create a Flower", o = 'Enter your names &amp;<br> click <div class="heart-wrapper"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart-solid"></use></svg></div> to create a unique flower<br/> for someone'), this.titleEl.innerHTML = i, this.bodyEl.innerHTML = o
+            //,this.next.click()
         },
         onNext: function() {
             var e = s.get("recipientMode") === !0 ? s.FLOW_STATE.FLOWER : s.FLOW_STATE.GENERATE;
@@ -21655,7 +21656,9 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
             this.state = e, this.el.setAttribute("data-state", e)
         },
         onCreate: function() {
-            u.trigger(o.REQUEST_RECIPIENT_MODE, !1), u.trigger(o.REQUEST_FLOW_STATE, s.FLOW_STATE.INTRO)
+            //hawker_fun Changes
+            //u.trigger(o.REQUEST_RECIPIENT_MODE, !1), u.trigger(o.REQUEST_FLOW_STATE, s.FLOW_STATE.INTRO)
+            u.trigger(o.REQUEST_RANDOMIZE_FLOWER)
         },
         onPrev: function() {
             u.trigger(o.REQUEST_FLOW_STATE, s.FLOW_STATE.GENERATE)
@@ -21811,7 +21814,7 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
             this.transitioner = new c({
                 el: this.rootNode,
                 viewMap: v
-            }), window.onresize = t.bind(this.onResize, this), o.start(), r.start()
+            }), console.log(this.onNext), window.onresize = t.bind(this.onResize, this), o.start(), r.start()
         },
         onResize: function(e) {
             this.transitioner.onResize(e)

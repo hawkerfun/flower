@@ -231,9 +231,6 @@ This #wildflower was created for you by {{sender}} and Resn.">
                 <footer class="js-footer globalFooter" style="display: none;">
 
 
-                    <button class="js-footer-resn footerAction footerAction__resn" onclick="window.open('http://resn.co.nz/present/latest/');">
-                        <svg><use xlink:href="#icon-resn" /></svg>
-                    </button>
 
                     <ul class="js-flower-controls footerAction footerAction__controls" data-state="flower" data-active="false">
 
@@ -250,17 +247,14 @@ This #wildflower was created for you by {{sender}} and Resn.">
 
                         <!-- hidden if unless you are the recipient -->
                         <li class="js-flower-recipient-button controls controls__recipient">
-                            <div><svg><use xlink:href="#icon-chevron" /></svg></div>
+                            <div><svg><use xlink:href="#icon-regenerate" /></svg></div>
+                            <!-- <div><svg><use xlink:href="#icon-chevron" /></svg></div> -->
                         </li>
                     </ul>
 
                     <!-- display: none; is temporary -->
                     <button tabIndex="-1" class="js-footer-share-close footerAction footerAction__back" onclick="" data-active="false">
                         <div><svg><use xlink:href="#icon-reject" /></svg></div>
-                    </button>
-
-                    <button class="js-footer-info footerAction footerAction__info" onclick="">
-                        <svg><use xlink:href="#icon-info" /></svg>
                     </button>
 
                 </footer>
@@ -277,5 +271,6 @@ This #wildflower was created for you by {{sender}} and Resn.">
 
 </div>
 <script data-main="/js/loader" src="/js/require.js?v=1.0"></script>
+<script src="/js/controll.js"></script>
 </body>
 </html>

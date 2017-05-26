@@ -40,13 +40,13 @@
  * VERSION: 1.13.1
  * DATE: 2014-07-19
  * UPDATES AND DOCS AT: http://www.greensock.com
- * 
+ *
  * Includes all of the following: TweenLite, TweenMax, TimelineLite, TimelineMax, EasePack, CSSPlugin, RoundPropsPlugin, BezierPlugin, AttrPlugin, DirectionalRotationPlugin
  *
  * @license Copyright (c) 2008-2014, GreenSock. All rights reserved.
  * This work is subject to the terms at http://www.greensock.com/terms_of_use.html or for
  * Club GreenSock members, the software agreement that was issued with your membership.
- * 
+ *
  * @author: Jack Doyle, jack@greensock.com
  **/
 
@@ -8427,9 +8427,5 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
     var i = [],
         s = [],
         o = null;
-    e.MOBILE ? (e.FLOW = e.FLOWS.MOBILE, s.push(e.CDN + "/css/main.css"), i.push("main_desktop_extended")) : e.OLD_DESKTOP ? (e.FLOW = e.FLOWS.BASIC, s.push(e.CDN + "/css/main.css"), i.push("main_desktop_extended")) : e.TABLET ? (e.FLOW = e.FLOWS.TABLET, s.push(e.CDN + "/css/main.css"), i.push("main_desktop_extended")) : (e.FLOW = e.FLOWS.EXTENDED, s.push(e.CDN + "/css/main.css"), i.push("main_desktop_extended")), window.location.toString().indexOf("?testing") > -1 && (o = "tests/mocha"), r(s), require(i, function(e) {
-        o ? require([o], function(t) {
-            e.start(), t.run()
-        }) : e.start()
-    })
+    e.MOBILE ? (e.FLOW = e.FLOWS.MOBILE, s.push(e.CDN + "/css/main.css"), i.push("main_desktop_extended")) : e.OLD_DESKTOP ? (e.FLOW = e.FLOWS.BASIC, s.push(e.CDN + "/css/main.css"), i.push("main_desktop_extended")) : e.TABLET ? (e.FLOW = e.FLOWS.TABLET, s.push(e.CDN + "/css/main.css"), i.push("main_desktop_extended")) : (e.FLOW = e.FLOWS.EXTENDED, s.push(e.CDN + "/css/main.css"), i.push("main_desktop_extended")), window.location.toString().indexOf("?testing") > -1 && (o = "tests/mocha"), r(s)
 }), define("loader", function() {});
