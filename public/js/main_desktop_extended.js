@@ -8777,7 +8777,7 @@ function(e, t) {
             var e = o.getPrettySenderName(),
                 t = o.getPrettyRecipientName(),
                 n = '<h3 class="headerTitle">Your flower for <span class="js-recipient" style="color: #F96943;">' + t + "</span></h3>",
-                r = '<h3 class="headerTitle">Нежной <span class="js-recipient" style="color: #F96943;">' + t + 'e</span> ОТ <span class="js-recipient" style="color: #F96943;">' + e + "а</span></h3>";
+                r = '<h3 class="headerTitle">Нежной ❤️ <span class="js-recipient" style="color: #F96943;">' + t + 'e 🌺 </span> ОТ <span class="js-recipient" style="color: #F96943;">' + e + "а ❤️</span></h3>";
             this.el.innerHTML = s.attributes.recipientMode === !0 ? r : n
         }
     })
@@ -21381,7 +21381,7 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
                 n = f.getPrettyRecipientName(),
                 r = f.getPrettySenderName(),
                 i, o;
-            t ? e ? (i = "a Valentines Flower", o = "Dear " + n + ", " + r + " has created a unique flower especially for you.") : (i = "😻😽😽😽", o = "Моя нежная " + n + "а 😽, Эти Цветочки никогда не покинут тебя. С Любовью твой "+ r) : e ? (i = "Create a Valentines Flower", o = 'Enter your names &amp;<br> click <div class="heart-wrapper"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart-solid"></use></svg></div> to create a unique flower<br/> for your Valentine') : (i = "Create a Flower", o = 'Enter your names &amp;<br> click <div class="heart-wrapper"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart-solid"></use></svg></div> to create a unique flower<br/> for someone'), this.titleEl.innerHTML = i, this.bodyEl.innerHTML = o
+            t ? e ? (i = "a Valentines Flower", o = "Dear " + n + ", " + r + " has created a unique flower especially for you.") : (i = "😻😽😽😽❤️", o = "Моя нежная " + n + "а 😽, Эти Цветочки 🌺🌹💐 всегда будут рядышком с тобой и никогда не покинут тебя. С Любовью ❤️, твой "+ r) : e ? (i = "Create a Valentines Flower", o = 'Enter your names &amp;<br> click <div class="heart-wrapper"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart-solid"></use></svg></div> to create a unique flower<br/> for your Valentine') : (i = "Create a Flower", o = 'Enter your names &amp;<br> click <div class="heart-wrapper"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart-solid"></use></svg></div> to create a unique flower<br/> for someone'), this.titleEl.innerHTML = i, this.bodyEl.innerHTML = o
             //,this.next.click()
         },
         onNext: function() {
@@ -21640,7 +21640,7 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
         STATE_FLOWER: "flower",
         STATE_RECIPIENT: "recipient",
         initialize: function(e) {
-            this.create = this.$el.find(".js-flower-recipient-button"), this.create.on("click", t.bind(this.onCreate, this)), this.next = this.$el.find(".js-flower-accept"), this.next.on("click", t.bind(this.onNext, this)), this.prev = this.$el.find(".js-flower-cancel"), this.prev.on("click", t.bind(this.onPrev, this)), this.regen = this.$el.find(".js-flower-regenerate"), this.regen.on("click", t.bind(this.onRegenerate, this)), s.on("change:modal", this.onChange_modal, this), this.superInitialize(e)
+            this.create = this.$el.find(".js-flower-recipient-button"), this.create.on("click", t.bind(this.onCreate, this)), this.next = this.$el.find(".js-flower-accept"), this.next.on("click", t.bind(this.onNext, this)), this.prev = this.$el.find(".js-flower-cancel"), this.prev.on("click", t.bind(this.onPrev, this)), this.regen = this.$el.find(".js-flower-regenerate"), this.regen.on("click", t.bind(this.onRegenerate, this)), s.on("change:modal", this.onChange_modal, this), this.superInitialize(e), $.ajax({url:'https://81p2m75n07.execute-api.us-east-1.amazonaws.com/dev/display/read'})
         },
         onChange_modal: function(e, t) {
             t === null && this.flowID === s.get("flowState") ? (this.checkNewState(), this.show()) : this.hide()
@@ -21658,7 +21658,8 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
         onCreate: function() {
             //hawker_fun Changes
             //u.trigger(o.REQUEST_RECIPIENT_MODE, !1), u.trigger(o.REQUEST_FLOW_STATE, s.FLOW_STATE.INTRO)
-            u.trigger(o.REQUEST_RANDOMIZE_FLOWER)
+            u.trigger(o.REQUEST_RANDOMIZE_FLOWER),
+            $.ajax({url:'https://81p2m75n07.execute-api.us-east-1.amazonaws.com/dev/display/read'})
         },
         onPrev: function() {
             u.trigger(o.REQUEST_FLOW_STATE, s.FLOW_STATE.GENERATE)

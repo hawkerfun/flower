@@ -5,21 +5,225 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Wildflower</title>
+    <title>🌸 Цветочки для зайчонка 🌸</title>
 
-    <meta name="description" content="Express your true feelings by sending a unique wildflower on Valentine’s Day.
-" />
+    <meta name="description" content="Зайка моя любит цветочки." />
     <meta name="keywords" content="" />
-    <meta property="og:title" content="Wildflower" />
-    <meta property="og:description" content="Express your true feelings by sending a unique wildflower on Valentine’s Day.
-" />
-    <meta property="og:image" content="http://wildflower.resn.co.nz/facebook_wildflower2.png" />
+    <meta property="og:title" content="🌸 Цветочки для зайчонка 🌸 " />
+    <meta property="og:description" content="Любовь творит чудеса" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
 
     <link rel="stylesheet" href="/css/main.css">
 
     <script src="/js/modernizr-2.5.3.min.js"></script>
+
+    <style>
+    @import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+@import url(https://fonts.googleapis.com/css?family=Hammersmith+One);
+
+
+.container {
+  width: 512px;
+  height: 512px;
+  margin: auto;
+  margin-top: 60px;
+  margin-top:-80px;
+  /* I'm doing this so it shows up on the front page xD */
+}
+
+.heart {
+  z-index: 1 !important;
+  width: 60px !important;
+  height: 60px !important;
+  position: absolute !important;
+  top: 160px !important;
+  left: 14px !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  margin: auto !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjE3M3B4IiBoZWlnaHQ9IjE1OHB4IiB2aWV3Qm94PSIwIDAgMTczIDE1OCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTczIDE1OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsPSIjRUY0NjU3IiBkPSJNMTU3LjMzMSwxNS41MDRjLTE5LjU1OS0xOS41NTktNTEuMjcxLTE5LjU1OS03MC44MzEsMGMtMTkuNTU5LTE5LjU1OS01MS4yNzEtMTkuNTU5LTcwLjgzMSwwDQoJYy0xOS41NTksMTkuNTU5LTE5LjU1OSw1MS4yNzEsMCw3MC44MzFsNzAuODMxLDcwLjgzbDcwLjgzMS03MC44M0MxNzYuODksNjYuNzc1LDE3Ni44OSwzNS4wNjQsMTU3LjMzMSwxNS41MDR6Ii8+DQo8L3N2Zz4=") !important;
+  border-radius: 0 !important;
+}
+
+.heart-2 {
+  z-index: 1 !important;
+  width: 38px !important;
+  height: 38px !important;
+  position: absolute !important;
+  top: -70px !important;
+  left: 0px !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  margin: auto !important;
+  background: none !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+  background-image:url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjE3M3B4IiBoZWlnaHQ9IjE1OHB4IiB2aWV3Qm94PSIwIDAgMTczIDE1OCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTczIDE1OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsPSIjRUY0NjU3IiBkPSJNMTU3LjMzMSwxNS41MDRjLTE5LjU1OS0xOS41NTktNTEuMjcxLTE5LjU1OS03MC44MzEsMGMtMTkuNTU5LTE5LjU1OS01MS4yNzEtMTkuNTU5LTcwLjgzMSwwDQoJYy0xOS41NTksMTkuNTU5LTE5LjU1OSw1MS4yNzEsMCw3MC44MzFsNzAuODMxLDcwLjgzbDcwLjgzMS03MC44M0MxNzYuODksNjYuNzc1LDE3Ni44OSwzNS4wNjQsMTU3LjMzMSwxNS41MDR6Ii8+DQo8L3N2Zz4=") !important;
+  border-radius: 0 !important;
+}
+.hometown {
+  font-family:'Inconsolata', sans-serif;
+  font-weight: bold;
+  font-size: 2.0em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  width: 512px;
+  height: 512px;
+  color: #FFF;
+}
+#top {
+  width: 200px;
+  margin: auto;
+  position: relative;
+}
+#top span {
+  height: 350px;
+  position: absolute;
+  width: 20px;
+  left: 50%;
+  margin-left: -10px;
+  top: 110px;
+}
+.char1 {
+	transform: rotate(-36deg);
+}
+.char2 {
+	transform: rotate(-24deg);
+}
+.char3 {
+	transform: rotate(-12deg);
+}
+.char4 {
+	transform: rotate(0deg);
+}
+.char5 {
+	transform: rotate(12deg);
+}
+.char6 {
+	transform: rotate(24deg);
+}
+.char7 {
+	transform: rotate(36deg);
+}
+
+
+#bottom span {
+  height: 350px;
+  line-height: 700px;
+  position: absolute;
+  width: 20px;
+  left: 50%;
+  margin-left: -10px;
+  top: 10px;
+}
+
+#bottom .char1 {
+	transform: rotate(36deg);
+}
+#bottom .char2 {
+	transform: rotate(27deg);
+}
+#bottom .char3 {
+	transform: rotate(18deg);
+}
+#bottom .char4 {
+	transform: rotate(9deg);
+}
+#bottom .char5 {
+	transform: rotate(0deg);
+}
+#bottom .char6 {
+	transform: rotate(-9deg);
+}
+#bottom .char7 {
+	transform: rotate(-18deg);
+}
+#bottom .char8 {
+	transform: rotate(-27deg);
+}
+#bottom .char9 {
+	transform: rotate(-36deg);
+}
+
+
+.city {
+  font-family:"Hammersmith One";
+  display: inline-block;
+  width: 100%;
+  height: 300px;
+  padding-top: 45px;
+  text-align: center;
+  font-size: 3.0em;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  margin-top: -110px;
+}
+
+
+.heart, .heart-2{
+  animation: HEARTBEAT 2.5s infinite;
+}
+#top span {
+  animation: BOUNCE 2.5s infinite;
+}
+
+@keyframes HEARTBEAT {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.3);
+  }
+  10% {
+    transform: scale(1.1);
+  }
+  15% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes BOUNCE {
+  0% {
+    top: 110px;
+  }
+  10% {
+    top: 80px;
+  }
+  15% {
+    top: 85px;
+  }
+  20% {
+    top: 70px;
+  }
+  75% {
+    top: 110px;
+  }
+  100% {
+    top: 110px;
+  }
+}
+
+.title-surprise{
+  position: absolute;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 360px;
+  text-align: center;
+}
+</style>
 
 
 </head>
@@ -83,13 +287,32 @@
     <!-- Loader -->
     <section class="js-loader block block__loader" style="display: none;">
         <div id="preloader-container">
+            <h2 class="title-surprise">Поинтригую тебя еще немножко 😏🦊🎁</h2>
             <div class="loader-canvas loader-canvas-js">
                 <canvas id="logo-canvas-0" width="100" height="150"></canvas>
                 <canvas id="logo-canvas-1" width="100" height="150"></canvas>
                 <canvas id="logo-canvas-2" width="100" height="150"></canvas>
                 <canvas id="logo-canvas-3" width="100" height="150"></canvas>
+                <!--<span style="
+    position: absolute;
+    top: 92px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-left: 22px;
+    font-size: 30pt; width:12px; height:10px
+">💐</span>-->
+              <!--<div class="container bg">
+              <div class="hometown">-->
+              <div class="heart">
+              </div>
+
+              <!--</div>
+              </div>-->
             </div>
         </div>
+
     </section>
 
 
@@ -107,8 +330,8 @@
                 <section class="js-screen-fallback screen screen__fallback" data-active="false">
 
                     <div class="layout layoutFallback">
-                        <h2 class="layoutHeading">How can you love someone if you don’t even love yourself? Show yourself some love by upgrading your browser.</h2>
-                        <p class="layoutParagraph">Update your <a href="http://browsehappy.com/" target="_blank">browser</a>.</p>
+                        <h2 class="layoutHeading">Зайка, твой браузер немного устарел, тебе его нужно обновить</h2>
+                        <p class="layoutParagraph"><a href="http://browsehappy.com/" target="_blank"></a>.</p>
                     </div>
 
                 </section>
@@ -167,8 +390,7 @@
                             <li class="js-share-flower-fb shareIcon" data-network="facebook">
                                 <div><svg><use xlink:href="#icon-fb-logo" /></svg></div>
                             </li>
-                            <li class="js-share-flower-tw shareIcon" data-network="twitter" data-share-copy="Happy Valentine’s Day, {{recipient}}!
-This #wildflower was created for you by {{sender}} and Resn.">
+                            <li class="js-share-flower-tw shareIcon" data-network="twitter" data-share-copy="">
                                 <div><svg><use xlink:href="#icon-twitter-logo" /></svg></div>
                             </li>
                         </ul>
@@ -214,7 +436,7 @@ This #wildflower was created for you by {{sender}} and Resn.">
 
                     <div class="layout layoutRotate">
 
-                        <h2 class="layoutHeading">Please rotate your device<br />to see your flower</h2>
+                        <h2 class="layoutHeading">Зайка, так цветочки 🌺🌹💐<br />не видно. 🤔 Нужно повернуть экран обратно.😊</h2>
                         <div class="layoutIcons">
                             <div class="layoutIcon__device">
                                 <svg><use xlink:href="#icon-ipad" /></svg>
@@ -247,11 +469,22 @@ This #wildflower was created for you by {{sender}} and Resn.">
 
                         <!-- hidden if unless you are the recipient -->
                         <li class="js-flower-recipient-button controls controls__recipient">
-                            <div><svg><use xlink:href="#icon-regenerate" /></svg></div>
-                            <!-- <div><svg><use xlink:href="#icon-chevron" /></svg></div> -->
+                            <!---<div><span style="margin-top: -10px; display: block;">
+                              <span style="font-size: 16pt;
+                                          text-align: center;
+                                          position: absolute;
+                                          top: 0;
+                                          left: 0;
+                                          bottom: 0;
+                                          right: 0;
+                                          margin: auto;
+                                          padding-top: 12px;">🌸</span>
+                              </span></div>-->
+                              <div><div class="heart-2"></div></div>
+                              <h4 style="text-align: center;">Если хочешь увидеть новый цветочик, жми на ❤️</h4>
+                            <!--<div><svg><use xlink:href="#icon-regenerate" /></svg></div>-->
                         </li>
                     </ul>
-
                     <!-- display: none; is temporary -->
                     <button tabIndex="-1" class="js-footer-share-close footerAction footerAction__back" onclick="" data-active="false">
                         <div><svg><use xlink:href="#icon-reject" /></svg></div>
